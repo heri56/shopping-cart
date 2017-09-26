@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('shop.index');
-});
+Route::get('/', ['uses' => 'ProductController@getindex',
+    'as' => 'product.index']);
 Route::get('/shoptes', function (){
     return view('layouts.master');
 });
